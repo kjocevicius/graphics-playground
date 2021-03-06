@@ -8,7 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:prod": "cross-env NODE_ENV=production ng build --prod"
+    "build:prod": "cross-env NODE_ENV=production ng build --prod",
+    "build:gh": "ng build --prod --base-href \"https://teraxas.github.io/graphics-playground/\"",
+    "deploy:gh": "ngh --dir dist/graphics-playground",
+    "gh": "npm run build:gh && npm run deploy:gh"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +38,7 @@
     "@tailwindcss/typography": "latest",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^1.0.0-rc.1",
     "codelyzer": "^6.0.0",
     "cross-env": "^7.0.3",
     "jasmine-core": "~3.6.0",
