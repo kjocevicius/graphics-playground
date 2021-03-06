@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+<div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+  <div class="relative transform sm:-rotate-6">
+    <h1 i18n="Page title" class="relative z-0 my-8 text-5xl w-100 break-words font-extrabold">Graphics playground
+    </h1>
+    <app-menu class="relative my-8"></app-menu>
+  </div>
+  <div class="z-1 relative my-8 py-3 sm:max-w-xl sm:mx-auto" [hidden]="!active">
+    <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+      <router-outlet (activate)="active = true" (deactivate)="active = false"></router-outlet>
+    </div>
+  </div>
+</div>
