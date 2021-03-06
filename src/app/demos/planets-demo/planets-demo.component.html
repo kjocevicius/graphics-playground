@@ -1,0 +1,10 @@
+<div>
+  <input #orbits type="checkbox" [checked]="true" />
+  <span>Orbits</span>
+</div>
+<div>
+  <input #shaders type="checkbox" [checked]="true" />
+  <span>Shaders</span>
+</div>
+<app-planet-viewer [planets]="planets" [orbitsEnabled]="orbits.checked" [shadersEnabled]="shaders.checked">
+</app-planet-viewer>
